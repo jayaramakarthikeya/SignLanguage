@@ -18,6 +18,7 @@ class ConvNet(nn.Module):
         self.fc2 = nn.Linear(120,48)
         self.fc3 = nn.Linear(48,25)
         self.relu = nn.ReLU()
+        
 
     def forward(self,x):
         x = self.relu(self.conv1(x))
@@ -64,7 +65,7 @@ def main():
     loss_func = nn.CrossEntropyLoss()
     loss_arr = []
     loss_per_epoch = 0
-    optimizer = optim.SGD(model.parameters(),0.01,momentum=0.9)
+    optimizer = optim.SGD(model.parameters(),0.01,momentum=0.9,weight_decay=1e-4)
     train_loader , _ = get_train_test_loaders()
     scheduler = optim.lr_scheduler.StepLR(optimizer,step_size=10,gamma=0.1)
     for epoch in range(8):

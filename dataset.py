@@ -56,7 +56,7 @@ class SignLanguageMNIST(Dataset):
             transforms.ToPILImage(),
             transforms.RandomResizedCrop(28,scale=(0.8,1.2)),
             transforms.ToTensor(),
-            transforms.Normalize(mean=self._mean,std=self._std)
+            transforms.Normalize(mean=self._mean, std=self._std)
         ])
 
         return {
