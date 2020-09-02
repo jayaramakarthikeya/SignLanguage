@@ -33,3 +33,6 @@ on any platform.
 Dataset posted on
     Kaggle in 2017, by an unnamed author with username `tecperson`:
         **https://www.kaggle.com/datamunge/sign-language-mnist**
+        
+    
+![alt text](https://github.com/JayaramKarthik/SignLanguage/blob/master/data/amer_sign2.png)
